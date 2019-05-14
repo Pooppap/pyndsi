@@ -50,7 +50,9 @@ if platform.system() == 'Darwin':
     library_dirs += ['/usr/local/opt/jpeg-turbo/lib/']
     libs += ['avutil', 'avformat', 'avcodec', 'swscale']
 elif platform.system() == 'Linux':
+    include_dirs += ['/usr/local/include/']
     libs = ['rt', 'turbojpeg']
+    library_dirs += ['/usr/local/lib/']
     libs += ['avutil', 'avformat', 'avcodec', 'swscale']
 elif platform.system() == 'Windows':
     libs = ['winmm']
